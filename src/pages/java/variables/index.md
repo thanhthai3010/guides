@@ -41,3 +41,22 @@ double  | 0.0d
 char  | '\u0000'
 String (or any object)  | null
 boolean  | false
+
+* Arrays
+
+An `array` is a container object that holds a fixed number of values of a single type. The length of an `array` is established when the `array` is created. After creation, its length is fixed.
+Each item in an `array` is called an `element`, and each `element` is accessed by its numerical index.
+
+To use an `array` in a program, you must declare a variable to reference the `array`, and you must specify the type of `array` the variable can reference. Here is the syntax for declaring an `array` variable:
+
+```java
+dataType[] arrayRefVar;   // preferred way.
+or
+dataType arrayRefVar[];  // works but not preferred way.
+```
+
+Following statement declares an `array` variable, `myList`, creates an `array` of 10 elements of double type and assigns its reference to `myList`:
+
+```java
+double[] myList = new double[10];
+```
