@@ -7,19 +7,21 @@ Control flow statements are exactly what the term means. They are statements tha
 
 Primarily, Java has the following constructs for flow control:
 
-*   `if`
+*   `if...then`
     ```java
     if( <expression that results in a boolean>){
         //code enters this block if the above expression is 'true'
     }
     ```
 
-*   `if...else`
+*   `if...then...else`
     ```java
-    if( <expression that results in a boolean> ){
-        //execute this block if the expression is 'true'
-    } else{
-        //execute this block if the expression is 'false'
+    if( <expression1 that results in a boolean> ) {
+        //execute this block if the expression1 is 'true'
+    } else if (<expression2 that results in a boolean>) {
+        //execute this block if the expression2 is 'true'
+    } else {
+        //execute this block if expression1 is 'false' and expression2 is 'false'
     }
     ```
 
