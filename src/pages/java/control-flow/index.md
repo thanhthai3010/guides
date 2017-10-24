@@ -9,17 +9,17 @@ Primarily, Java has the following constructs for flow control:
 
 *   `if`
     ```java
-    if( <expression that results in a boolean>){
-        //code enters this block if the above expression is 'true'
+    if ( < expression that results in a boolean > ) {
+     //code enters this block if the above expression is 'true'
     }
     ```
 
 *   `if...else`
     ```java
-    if( <expression that results in a boolean> ){
-        //execute this block if the expression is 'true'
-    } else{
-        //execute this block if the expression is 'false'
+    if ( < expression that results in a boolean > ) {
+     //execute this block if the expression is 'true'
+    } else {
+     //execute this block if the expression is 'false'
     }
     ```
 
@@ -28,34 +28,60 @@ Primarily, Java has the following constructs for flow control:
 Switch is an alternative for the `if...else` construct when there are multiple values and cases to check against.
 
 ```java
-switch( <integer / String / Enum > ){
-    case <int/String/Enum>: 
-        <statements>
-        break;
-    case <int/String/Enum>:
-        <statements>
-    default:
-        <statements>
+switch ( < integer / String / Enum > ) {
+ case <int / String / Enum > :
+  < statements >
+   break;
+ case <int / String / Enum > :
+  < statements >
+   default:
+   < statements >
 }
 ```
 
 Note: The program flow `falls through` the next `case` if the `break` statement is missing. For e.g. Let's say you say the standard 'Hello' to everyone at office, but you are extra nice to the girl who sits next to you and sound grumpy to your boss. The way to represent would be something like:
 ```java
-switch(person){
-    case 'boss': 
-        soundGrumpy();
-        break;
-    case 'neighbour': 
-        soundExtraNice();
-    case 'colleague':
-        soundNormal();
-        break;
-    default:
-        soundNormal();
+switch (person) {
+ case 'boss':
+  soundGrumpy();
+  break;
+ case 'neighbour':
+  soundExtraNice();
+ case 'colleague':
+  soundNormal();
+  break;
+ default:
+  soundNormal();
 }
 ```
 
     Note: The `default` case runs when none of the `case` matches. Remember that when a case has no `break` statement, it `falls through` to the next case and will continue to the subsequent `cases` till a `break` is encountered.
+    
+*   `while`
+
+The while statement continually executes a block of statements while a particular condition is true. Its syntax can be expressed as:
+
+```java
+while (expression) {
+     statement(s)
+}
+```
+The `while` statement evaluates *expression*, which must return a `boolean` value. If the expression evaluates to `true`, the `while` statement executes the statement(s) in the `while` block. The `while` statement continues testing the expression and executing its block until the expression evaluates to `false`. Using the `while` statement to print the values from 1 through 10 can be accomplished as in the following code:
+
+```java
+int count = 1;
+while (count < 11) {
+ System.out.println("Count is: " + count);
+ count++;
+}
+```
+You can implement an infinite loop using the `while` statement as follows:
+
+```java
+while (true){
+    // your code goes here
+}
+```
 
 *   `nested statements`
 
@@ -71,22 +97,22 @@ One of the ways to represent this will be:
 int cash = 50;
 String company = "friends";
 
-if(cash<25){
-    getCoffee();
-} else if(cash < 60){
-    getDecentMeal();
-} else if(cash < 100){
-    getDecentMeal();
-    getGlassOfWine();
+if (cash < 25) {
+ getCoffee();
+} else if (cash < 60) {
+ getDecentMeal();
+} else if (cash < 100) {
+ getDecentMeal();
+ getGlassOfWine();
 } else {
-    switch(company){
-        case "wife":
-            candleLitDinner();
-            break;
-        case "friends": 
-            meetFriendsAtSportsBar();
-            break;
-    }
+ switch (company) {
+  case "wife":
+   candleLitDinner();
+   break;
+  case "friends":
+   meetFriendsAtSportsBar();
+   break;
+ }
 }
 ```
 
