@@ -24,3 +24,20 @@ int i = 10;
 // variable myFloat now points to the object
 Float myFloat = new Float(1.0);
 ```
+* Default Values
+
+It's not always necessary to assign a value when a field is declared. Fields that are declared but not initialized will be set to a reasonable default by the compiler. Generally speaking, this default will be zero or `null`, depending on the data type. Relying on such default values, however, is generally considered bad programming style.
+
+The following chart summarizes the default values for the above data types.
+
+Data Type  | Default Value (for fields)
+------------- | -------------
+byte  | 0
+short  | 0
+int  | 0
+long  | 0L
+float  | 0.0f
+double  | 0.0d
+char  | '\u0000'
+String (or any object)  | null
+boolean  | false
